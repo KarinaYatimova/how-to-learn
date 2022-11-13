@@ -36,8 +36,9 @@
 }
 
 .header__title {
+  margin: 0;
   max-width: 730px;
-  margin-left: 64px;
+  padding-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -45,6 +46,7 @@
 }
 
 .header__subtitle {
+  margin: 0;
   max-width: 388px;
   position: absolute;
   left: 64px;
@@ -80,7 +82,7 @@
 }
 
 .discription {
-  padding: 100px 0;
+  padding-top: 100px ;
 }
 
 .two-columns {
@@ -153,13 +155,13 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0px auto;
 }
 
-.cell {
+.table__cell {
   width: 250px;
   margin-top: 60px;
-  margin-right: auto;
 }
 
 ul {
@@ -170,29 +172,27 @@ ul {
   margin-right: 0;
 }
 
-.heading {
-  margin-top: 0;
-  margin-bottom: 20px;
+.table__heading {
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
 }
 
-.text {
+.table__text {
+  margin: 0;
+  margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
-.table__text:last-child {
-  margin-top: 20px;
-}
 
 .feynman {
   background-color:  #f2f2f2;
   z-index: 1;
   position: relative;
-  height: 890px;
+  min-height: 890px;
 }
 
 .feynman__title {
@@ -208,6 +208,7 @@ ul {
 
 
 .feynman__subtitle {
+  margin: 0;
   text-align: center;
   line-height: 51px;
   font-size: 36px;
@@ -240,31 +241,24 @@ ul {
   color: white;
   background-color: #1f1f1f;
   padding-top: 90px;
+  padding-bottom: 90px;
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  z-index: -1;
 }
-
 
 .table__cell_theme_dark {
   width: 200px;
   margin-top: 90px;
-}
-.table__cell_theme_dark:nth-child(5n) {
-  margin-right: 0;
+  z-index: 1;
 }
 
 .kayfman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
   width: 877px;
   height: 877px;
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: -1;
 }
 
 .footer {
@@ -273,7 +267,7 @@ ul {
   min-height: 350px;
   padding-top: 60px;
   padding-bottom: 40px;
-  height: 1px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -282,8 +276,6 @@ ul {
   display: flex;
   justify-content: space-between;
   min-height: 350px;
-  height: 100%;
-
 }
 
 .footer__column_content_copyright {
@@ -296,7 +288,6 @@ ul {
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
 }
-
 
 .footer__author {
   line-height: 25px;
